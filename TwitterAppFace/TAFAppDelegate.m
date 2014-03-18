@@ -13,6 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //self.window.tintColor = [UIColor blueColor];
+    //[UINavigationBar appearance].barTintColor = [UIColor blueColor];
+    
     return YES;
 }
 							

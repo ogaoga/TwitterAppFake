@@ -100,9 +100,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="1mH-b2-OqE">
+                            <rect key="frame" x="0.0" y="64" width="320" height="148"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpeg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-56-tng">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6uZ-iR-Sry">
+                                    <rect key="frame" x="128" y="20" width="64" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="lcd-F9-eRr"/>
+                                        <constraint firstAttribute="height" constant="64" id="r5R-7v-r1j"/>
+                                    </constraints>
+                                </imageView>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GE8-aA-QBf">
+                                    <rect key="frame" x="141" y="111" width="39" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </pageControl>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tsutomu Ogasawara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMj-XJ-JAI">
+                                    <rect key="frame" x="0.0" y="87" width="321" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@ogaoga" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtX-nU-2t3">
+                                    <rect key="frame" x="20" y="102" width="280" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="280" id="pzX-9H-yuH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="QtX-nU-2t3" secondAttribute="bottom" constant="20" symbolic="YES" id="3g6-Tx-SXH"/>
+                                <constraint firstItem="lMj-XJ-JAI" firstAttribute="centerX" secondItem="GE8-aA-QBf" secondAttribute="centerX" id="9SS-a7-y66"/>
+                                <constraint firstItem="ohn-56-tng" firstAttribute="top" secondItem="1mH-b2-OqE" secondAttribute="top" id="Ap6-fL-Mgd"/>
+                                <constraint firstAttribute="bottom" secondItem="ohn-56-tng" secondAttribute="bottom" id="CwS-wr-t4B"/>
+                                <constraint firstItem="ohn-56-tng" firstAttribute="leading" secondItem="1mH-b2-OqE" secondAttribute="leading" id="O5A-Je-bzc"/>
+                                <constraint firstAttribute="trailing" secondItem="ohn-56-tng" secondAttribute="trailing" id="V2q-kb-eTN"/>
+                                <constraint firstItem="lMj-XJ-JAI" firstAttribute="top" secondItem="6uZ-iR-Sry" secondAttribute="bottom" constant="8" symbolic="YES" id="WsO-mQ-4QS"/>
+                                <constraint firstItem="lMj-XJ-JAI" firstAttribute="leading" secondItem="ohn-56-tng" secondAttribute="leading" id="ct3-xg-FEq"/>
+                                <constraint firstItem="QtX-nU-2t3" firstAttribute="centerX" secondItem="lMj-XJ-JAI" secondAttribute="centerX" id="fxr-jM-ZYJ"/>
+                                <constraint firstItem="6uZ-iR-Sry" firstAttribute="centerX" secondItem="GE8-aA-QBf" secondAttribute="centerX" id="mSD-45-3bW"/>
+                                <constraint firstItem="6uZ-iR-Sry" firstAttribute="centerX" secondItem="ohn-56-tng" secondAttribute="centerX" id="qCR-sf-mRq"/>
+                                <constraint firstItem="6uZ-iR-Sry" firstAttribute="top" secondItem="1mH-b2-OqE" secondAttribute="top" constant="20" symbolic="YES" id="sXd-hi-RX3"/>
+                                <constraint firstAttribute="bottom" secondItem="GE8-aA-QBf" secondAttribute="bottom" id="vkU-Xf-QNJ"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="9lT-LW-NzA">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="234" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9lT-LW-NzA" id="6ZA-1t-JFf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -160,6 +215,8 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icon.jpg" width="500" height="500"/>
+        <image name="jpeg.jpg" width="520" height="260"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.21569084088881618" green="0.73686835368967007" blue="1" alpha="1" colorSpace="calibratedRGB"/>

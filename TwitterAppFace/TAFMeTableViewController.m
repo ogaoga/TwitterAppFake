@@ -32,6 +32,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    /*
+    CGSize profileSize = self.profileScrollView.bounds.size;
+    profileSize.width *= 2.0;
+    [self.profileScrollView setContentSize:profileSize];
+     */
 }
 
 - (void)didReceiveMemoryWarning

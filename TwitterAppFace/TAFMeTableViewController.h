@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TAFMeTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 
 @end

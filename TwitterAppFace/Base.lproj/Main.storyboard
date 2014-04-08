@@ -97,23 +97,23 @@
             <objects>
                 <tableViewController id="uQ4-H7-bQa" customClass="TAFMeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oaM-5Y-ZMc">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="960" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="1mH-b2-OqE">
-                            <rect key="frame" x="0.0" y="64" width="640" height="148"/>
+                            <rect key="frame" x="0.0" y="64" width="960" height="148"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jpeg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-56-tng">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
-                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9x-Vk-Lib">
-                                    <rect key="frame" x="0.0" y="0.0" width="642" height="148"/>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9x-Vk-Lib">
+                                    <rect key="frame" x="0.0" y="0.0" width="960" height="148"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <view contentMode="left" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bf9-Ch-uDq" userLabel="View1">
-                                            <rect key="frame" x="0.0" y="0.0" width="322" height="148"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="640" height="148"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6uZ-iR-Sry">
@@ -137,7 +137,7 @@
                                             </subviews>
                                         </view>
                                         <view contentMode="left" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg8-hp-Sbo" userLabel="View2">
-                                            <rect key="frame" x="321" y="0.0" width="322" height="148"/>
+                                            <rect key="frame" x="321" y="0.0" width="640" height="148"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プロフィールをここに表示したり" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="321" translatesAutoresizingMaskIntoConstraints="NO" id="UqH-Lg-m0p">
@@ -152,11 +152,27 @@
                                                 <constraint firstAttribute="width" constant="320" id="zFg-Kx-vLP"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="left" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGL-lI-WZ8" userLabel="View3">
+                                            <rect key="frame" x="640" y="0.0" width="640" height="148"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="プロフィールをここに表示したり" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="321" translatesAutoresizingMaskIntoConstraints="NO" id="rF3-nL-Kwf">
+                                                    <rect key="frame" x="0.0" y="39" width="321" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="320" id="AlR-ay-7iQ"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Lg8-hp-Sbo" secondAttribute="trailing" id="4Se-vy-2Ho"/>
                                         <constraint firstItem="Lg8-hp-Sbo" firstAttribute="leading" secondItem="Bf9-Ch-uDq" secondAttribute="trailing" id="PrX-8R-OLb"/>
                                         <constraint firstItem="Lg8-hp-Sbo" firstAttribute="bottom" secondItem="Bf9-Ch-uDq" secondAttribute="bottom" id="gtH-0w-I0L"/>
+                                        <constraint firstAttribute="trailing" secondItem="LGL-lI-WZ8" secondAttribute="trailing" id="q9p-nW-b1j"/>
                                         <constraint firstItem="Lg8-hp-Sbo" firstAttribute="top" secondItem="Bf9-Ch-uDq" secondAttribute="top" id="vVr-7O-LeW"/>
                                     </constraints>
                                 </scrollView>
@@ -175,10 +191,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="9lT-LW-NzA">
-                                <rect key="frame" x="0.0" y="234" width="640" height="44"/>
+                                <rect key="frame" x="0.0" y="234" width="960" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9lT-LW-NzA" id="6ZA-1t-JFf">
-                                    <rect key="frame" x="0.0" y="0.0" width="640" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="960" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -190,8 +206,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Me" id="lRb-ZO-GyM"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="640" height="480"/>
+                    <size key="freeformSize" width="960" height="480"/>
                     <connections>
+                        <outlet property="pageControl" destination="GE8-aA-QBf" id="VPI-N5-J4K"/>
                         <outlet property="profileScrollView" destination="q9x-Vk-Lib" id="hNZ-Po-ng0"/>
                     </connections>
                 </tableViewController>

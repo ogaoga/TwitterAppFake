@@ -38,8 +38,6 @@
     profileSize.width *= 2.0;
     [self.profileScrollView setContentSize:profileSize];
      */
-    
-    self.pageControl.currentPage = 1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,5 +118,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    self.pageControl.currentPage = page;
+    NSLog(@"%d", page);
+}
 
 @end

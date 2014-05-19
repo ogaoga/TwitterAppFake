@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE019139192A19A300092768 /* user_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = EE019138192A19A300092768 /* user_timeline.json */; };
+		EE01913C192A2C8100092768 /* TAFMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE01913B192A2C8100092768 /* TAFMeTableViewCell.m */; };
 		EE13629818E16C6000350548 /* jpeg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE13629718E16C6000350548 /* jpeg.jpg */; };
 		EE13629A18E16CFC00350548 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE13629918E16CFC00350548 /* icon.jpg */; };
 		EE401D5518D82ADD000CBA6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE401D5418D82ADD000CBA6A /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		EE019138192A19A300092768 /* user_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_timeline.json; sourceTree = SOURCE_ROOT; };
+		EE01913A192A2C8100092768 /* TAFMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAFMeTableViewCell.h; sourceTree = "<group>"; };
+		EE01913B192A2C8100092768 /* TAFMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAFMeTableViewCell.m; sourceTree = "<group>"; };
 		EE13629718E16C6000350548 /* jpeg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jpeg.jpg; sourceTree = "<group>"; };
 		EE13629918E16CFC00350548 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		EE401D5118D82ADD000CBA6A /* TwitterAppFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterAppFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +132,8 @@
 				EE401D6618D82ADD000CBA6A /* Main.storyboard */,
 				EE401D8C18D837E2000CBA6A /* TAFMeTableViewController.h */,
 				EE401D8D18D837E2000CBA6A /* TAFMeTableViewController.m */,
+				EE01913A192A2C8100092768 /* TAFMeTableViewCell.h */,
+				EE01913B192A2C8100092768 /* TAFMeTableViewCell.m */,
 				EE401D6918D82ADD000CBA6A /* TAFFirstViewController.h */,
 				EE401D6A18D82ADD000CBA6A /* TAFFirstViewController.m */,
 				EE401D6C18D82ADD000CBA6A /* TAFSecondViewController.h */,
@@ -275,6 +280,7 @@
 				EE401D8E18D837E2000CBA6A /* TAFMeTableViewController.m in Sources */,
 				EE401D6B18D82ADD000CBA6A /* TAFFirstViewController.m in Sources */,
 				EE401D6518D82ADD000CBA6A /* TAFAppDelegate.m in Sources */,
+				EE01913C192A2C8100092768 /* TAFMeTableViewCell.m in Sources */,
 				EE401D6E18D82ADD000CBA6A /* TAFSecondViewController.m in Sources */,
 				EE401D6118D82ADD000CBA6A /* main.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import "TAFMeTableViewController.h"
+#import "TAFMeTableViewCell.h"
 
 @interface TAFMeTableViewController ()
 
@@ -42,7 +43,7 @@
     NSError *error = nil;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"user_timeline" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    self.userTimeline = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    self.userTimeline = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,13 +68,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    TAFMeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
     //cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
-    cell.textLabel.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
+    cell.userName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
     
     return cell;
+    
 }
 
 /*

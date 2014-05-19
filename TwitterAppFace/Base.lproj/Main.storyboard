@@ -175,6 +175,9 @@
                                         <constraint firstAttribute="trailing" secondItem="LGL-lI-WZ8" secondAttribute="trailing" id="q9p-nW-b1j"/>
                                         <constraint firstItem="Lg8-hp-Sbo" firstAttribute="top" secondItem="Bf9-Ch-uDq" secondAttribute="top" id="vVr-7O-LeW"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="delegate" destination="uQ4-H7-bQa" id="3Nc-uW-o9y"/>
+                                    </connections>
                                 </scrollView>
                                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GE8-aA-QBf">
                                     <rect key="frame" x="141" y="111" width="39" height="37"/>

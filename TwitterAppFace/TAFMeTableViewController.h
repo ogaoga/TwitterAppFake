@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
+@property (retain, nonatomic) NSArray *userTimeline;
+
 @end

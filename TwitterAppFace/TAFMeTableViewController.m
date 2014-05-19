@@ -38,6 +38,11 @@
     profileSize.width *= 2.0;
     [self.profileScrollView setContentSize:profileSize];
      */
+    
+    NSError *error = nil;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"user_timeline" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    self.userTimeline = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,13 +56,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 5;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return self.userTimeline.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +70,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
+    //cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
+    cell.textLabel.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
     
     return cell;
 }

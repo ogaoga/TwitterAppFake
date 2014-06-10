@@ -73,9 +73,17 @@
     
     // Configure the cell...
     //cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
-    cell.userName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
+    NSString *userName = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
+    cell.userName.text = userName;
+    /*
+    if ( userName.length == 0 ) {
+        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:cell.userName attribute:<#(NSLayoutAttribute)#> relatedBy:<#(NSLayoutRelation)#> toItem:<#(id)#> attribute:<#(NSLayoutAttribute)#> multiplier:<#(CGFloat)#> constant:<#(CGFloat)#>
+    }
+     */
+    
     cell.screenName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.screen_name"];
     cell.tweet.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
+    //[cell.tweet sizeToFit];
 
     return cell;
 }

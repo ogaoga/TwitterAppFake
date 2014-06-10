@@ -74,9 +74,10 @@
     // Configure the cell...
     //cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
     cell.userName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
-    
+    cell.screenName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.screen_name"];
+    cell.tweet.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
+
     return cell;
-    
 }
 
 /*

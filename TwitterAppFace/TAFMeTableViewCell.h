@@ -10,5 +10,7 @@
 
 @interface TAFMeTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *screenName;
+@property (weak, nonatomic) IBOutlet UILabel *tweet;
 
 @end

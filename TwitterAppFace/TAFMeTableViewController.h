@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TAFMeTableViewCell.h"
 
 @interface TAFMeTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (retain, nonatomic) NSArray *userTimeline;
+
+@property (strong, nonatomic) TAFMeTableViewCell *dummyCell;
 
 @end

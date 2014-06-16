@@ -10,7 +10,6 @@
 #import "TAFMeTableViewCell.h"
 
 @interface TAFMeTableViewController ()
-
 @end
 
 @implementation TAFMeTableViewController
@@ -44,6 +43,9 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"user_timeline" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     self.userTimeline = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    
+    // for calc
+    _dummyCell = [self.tableView dequeueReusableCellWithIdentifier:@"DummyCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,26 +68,36 @@
     return self.userTimeline.count;
 }
 
+// set data into a cell
+- (void)setCell:(TAFMeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    NSString *userName = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
+    cell.userName.text = userName;
+    cell.screenName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.screen_name"];
+    cell.tweet.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     TAFMeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    //cell.textLabel.text = [NSString stringWithFormat:@"%d - %d", indexPath.section, indexPath.row];
+    /*
     NSString *userName = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.name"];
     cell.userName.text = userName;
-    /*
-    if ( userName.length == 0 ) {
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:cell.userName attribute:<#(NSLayoutAttribute)#> relatedBy:<#(NSLayoutRelation)#> toItem:<#(id)#> attribute:<#(NSLayoutAttribute)#> multiplier:<#(CGFloat)#> constant:<#(CGFloat)#>
-    }
-     */
-    
     cell.screenName.text = [self.userTimeline[indexPath.row] valueForKeyPath:@"user.screen_name"];
     cell.tweet.text = [self.userTimeline[indexPath.row] valueForKey:@"text"];
-    //[cell.tweet sizeToFit];
-
+     */
+    [self setCell:cell atIndexPath:indexPath];
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self setCell:_dummyCell atIndexPath:indexPath];
+    [_dummyCell layoutSubviews];
+    CGFloat height = [_dummyCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return height;
 }
 
 /*
